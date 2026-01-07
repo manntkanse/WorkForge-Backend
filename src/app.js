@@ -1,11 +1,10 @@
-import express from 'express';
+import express from "express";
+import route from "./route.js";
 
 const app = express();
 
 app.use(express.json());
 
-app.get('/health', (_req, res) => {
-  res.status(200).send('API is running!');
-});
+route(app);
 
 export default app;
